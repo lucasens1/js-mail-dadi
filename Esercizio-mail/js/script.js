@@ -33,13 +33,13 @@ btnElem.addEventListener("click", function(){
             alert("La tua e-mail non è presente");
         } 
     }
-    console.log(str[1], str[0]);
+    console.log(str[0], str[1]);
     //vado a controllare che l'array creato str, abbiamo la parte dell'email esistente e valida
     for(let a = 0; a <= serviceArr.length - 1; a++){
         if(str[1] === serviceArr[a]){
             console.log("email valida");
             flag1 = true;
-        }
+        } 
     }
 
     if(flag === true && flag1 === true){
