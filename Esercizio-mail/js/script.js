@@ -24,28 +24,36 @@ btnElem.addEventListener("click", function(){
     let flag1 = false;
     
     //inizio un ciclo di controllo
+    //DA FIXARE CONTROLLO
     for(let i=0; (i <= emailArr.length - 1) && (flag === false); i++){
         if(str[0] === emailArr[i]){
             flag = true;
-            console.log(flag);
-        } else if (i === emailArr.lenght - 1 && flag === true){
-            //Se l'email non figura in nessun elemento dell'array creato
-            alert("La tua e-mail non è presente");
-        } 
+            console.log("e-mail : " + flag );
+        }
+        else{
+            console.log("e-mail : " + flag);
+        }
     }
+
+    //se la flag è rimasta False allora esco dal programma con return
+    if (flag === false){
+        //Se l'email non figura in nessun elemento dell'array creato
+        console.log(flag);
+    } 
     console.log(str[0], str[1]);
+
     //vado a controllare che l'array creato str, abbiamo la parte dell'email esistente e valida
     for(let a = 0; a <= serviceArr.length - 1; a++){
         if(str[1] === serviceArr[a]){
-            console.log("email valida");
             flag1 = true;
         } 
     }
 
     if(flag === true && flag1 === true){
-        document.getElementById("res").innerHTML = "ok ci sei";
+        document.getElementById("res").innerHTML = `Ok figuri nella lista benvenuto nel fight club,
+        ${str[0]}`;
     }else {
-        document.getElementById("res").innerHTML = "";
+        document.getElementById("res").innerHTML = "Non esisti bro";
     }
 
 })
