@@ -43,7 +43,9 @@ btnElem.addEventListener("click", function(){
     }
 
     if(flag === true && flag1 === true){
-        document.getElementById("res").innerHTML = "ok ci sei"
+        document.getElementById("res").innerHTML = "ok ci sei";
+    }else {
+        document.getElementById("res").innerHTML = "";
     }
 
 })
